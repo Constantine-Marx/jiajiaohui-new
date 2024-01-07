@@ -1,8 +1,11 @@
 import {Button, Image, View} from "@tarojs/components";
-import ArrowIcon from 'public/vector.png'
+import ArrowIcon from '../../../public/arrow.png'
+import {useNavigate} from "react-router-dom";
 
 export default function TutorForm()
 {
+  const navigate = useNavigate();
+
   return (
     <View className="flex flex-col h-full w-full" style={{backgroundColor: "#F8F8F8"}}>
       <View className="flex flex-1 flex-col w-full px-6 py-10" style={{backgroundColor: "#F8F8F8"}}>
@@ -32,7 +35,11 @@ export default function TutorForm()
         </View>
       </View>
       <View className="flex justify-center bg-white pt-3 pb-10 px-6" style={{height: "15%"}}>
-        <Button className="flex items-center justify-center h-full w-full text-white" style={{backgroundColor: "#4572FB"}}>完成</Button>
+        <Button
+          className="flex items-center justify-center h-full w-full text-white"
+          style={{backgroundColor: "#4572FB"}}
+          onClick={() => navigate('/')}
+        >完成</Button>
       </View>
     </View>
   )

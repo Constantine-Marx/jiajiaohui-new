@@ -1,6 +1,6 @@
 import {Image, Input, View} from "@tarojs/components";
 import {ReactNode} from "react";
-import ArrowIcon from 'public/vector.png'
+import ArrowIcon from '../../../public/arrow.png'
 import LocationIcon from 'public/location.png'
 import './data-cell.scss';
 
