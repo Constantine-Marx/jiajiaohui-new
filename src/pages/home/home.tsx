@@ -1,9 +1,11 @@
-import {Image, View} from "@tarojs/components";
-import {Button} from "@antmjs/vantui";
+import {Button, Image, View} from "@tarojs/components";
 import {useNavigate} from "react-router-dom";
 import LocationIcon from "public/location.svg";
 import StarIcon from "public/star.svg";
-import ArrowIcon from "public/arrow.png";
+import Arrow1Icon from "public/arrow1.svg";
+import Arrow3Icon from "public/arrow3.svg";
+import Arrow4Icon from "public/arrow4.svg";
+import SearchIcon from "public/search.svg";
 
 export default function Home()
 {
@@ -11,11 +13,29 @@ export default function Home()
 
   return (
       <>
-        <View className="flex flex-col items-center box-border h-full w-full px-6 pb-24" style={{backgroundColor: "#F8F8F8"}}>
-          <Button onClick={() => navigate('/login')}>登录</Button>
-          <Button onClick={() => navigate('/create-order')}>新建订单</Button>
-          <View className="flex flex-col box-border w-full h-1/3 px-4 pb-4 my-3 bg-white rounded-md shadow-sm">
-            <View className="flex w-full h-fit">
+        <View className="flex flex-col items-center box-border w-full h-full px-6 pb-24" style={{backgroundColor: "#F8F8F8"}}>
+          <View className="flex items-center w-full my-2">
+            <View className="mr-3 font-semibold" style={{color: "#4572FB"}}>
+              广州
+              <Image className="h-1/5" mode="heightFix"  src={Arrow3Icon} />
+            </View>
+            <View className="flex flex-1 px-4 py-3 rounded-3xl" style={{color: "#CCCCCC", backgroundColor: "#EEEEF0"}}>
+              单号/中介/订单信息搜索
+              <Image className="h-2/3" mode="heightFix"  src={SearchIcon} />
+            </View>
+          </View>
+          <View className="flex items-center justify-between w-full px-8 py-4 my-1.5 rounded-lg" style={{backgroundColor: "#4572FB"}}>
+            <View className="text-white font-semibold px-2">地点  </View>
+            <Image className="h-1/4" mode="heightFix"  src={Arrow4Icon} />
+            <View className="text-white font-semibold px-2">薪酬  </View>
+            <Image className="h-1/4" mode="heightFix"  src={Arrow4Icon} />
+            <View className="text-white font-semibold px-2">年段  </View>
+            <Image className="h-1/4" mode="heightFix"  src={Arrow4Icon} />
+            <View className="text-white font-semibold px-2">学科  </View>
+            <Image className="h-1/4" mode="heightFix"  src={Arrow4Icon} />
+          </View>
+          <View className="flex flex-col box-border w-full h-1/3 px-4 pb-4 my-1.5 bg-white rounded-lg shadow-sm">
+            <View className="flex">
               <View className="flex items-center justify-center w-fit h-fit px-3 py-1.5 mr-2 border-x-3 border-b-3 rounded-b-md font-semibold"
                 style={{backgroundColor: "#EAFFF0", color: "#30D8B9", borderColor: "#61E8D8"}}
               >
@@ -30,19 +50,35 @@ export default function Home()
                 发布于1天前
               </View>
             </View>
-            <View className="flex flex-1 justify-between w-full my-4">
+            <View className="box-border flex flex-1 justify-between py-4">
               <View className="flex flex-col w-2/5">
-
+                <View className="text-xl font-semibold" style={{color: "#52566A"}}>初中 二年级</View>
+                <View className="flex items-center">
+                  <View className="text-lg font-semibold" style={{color: "#FB7145"}}>¥</View>
+                  <View className="text-2xl font-semibold" style={{color: "#FB7145"}}>120</View>
+                  <View style={{color: "#52566A"}}>/小时</View>
+                </View>
               </View>
-              <View className="flex flex-col w-1/2 rounded-lg" style={{backgroundColor: "#F9FAFE"}}>
-
+              <View className="flex flex-col justify-between w-1/2 px-2 py-3 rounded-lg" style={{backgroundColor: "#F9FAFE"}}>
+                <View className="flex">
+                  <View className="flex-1" style={{color: "#99A1B6"}}>辅导日期</View>
+                  <View style={{color: "#52566A"}}>3次/周</View>
+                </View>
+                <View className="flex">
+                  <View className="flex-1" style={{color: "#99A1B6"}}>辅导时长</View>
+                  <View style={{color: "#52566A"}}>2小时</View>
+                </View>
+                <View className="flex">
+                  <View className="flex-1" style={{color: "#99A1B6"}}>信息费</View>
+                  <View style={{color: "#52566A"}}>¥800</View>
+                </View>
               </View>
             </View>
-            <View className="flex items-center w-full h-fit">
-              <View className="flex items-center w-fit h-fit text-lg">
-                <Image className="h-4/5" mode="heightFix" src={LocationIcon} />
-                北京市朝阳区京旺家园
-                <Image className="h-4/5" mode="heightFix" src={ArrowIcon} />
+            <View className="flex">
+              <View className="flex items-center w-fit text-lg">
+                <Image className="h-3/5" mode="heightFix" src={LocationIcon} />
+                <View className="ml-1 mr-2">北京市朝阳区京旺家园</View>
+                <Image className="h-1/2" mode="heightFix" src={Arrow1Icon} />
               </View>
               <View className="flex flex-1 items-center justify-end h-full">
                 <Image className="h-4/5" mode="heightFix" src={StarIcon} />
@@ -51,6 +87,8 @@ export default function Home()
           </View>
         </View>
         <View className="fixed bottom-0 w-full h-24 flex justify-between bg-white px-11 pt-4 pb-8">
+          <Button className="flex items-center justify-center mx-2 shadow-sm" onClick={() => navigate('/login')}>登录</Button>
+          <Button className="flex items-center justify-center mx-2 shadow-sm" onClick={() => navigate('/create-order')}>新建订单</Button>
         </View>
       </>
     )
