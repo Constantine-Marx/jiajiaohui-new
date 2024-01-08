@@ -3,9 +3,12 @@ import {useNavigate} from "react-router-dom";
 import LocationIcon from "public/location.svg";
 import StarIcon from "public/star.svg";
 import Arrow1Icon from "public/arrow1.svg";
-import Arrow3Icon from "public/arrow3.svg";
-import Arrow4Icon from "public/arrow4.svg";
+import Arrow3Icon from "../../../public/arrow4.svg";
+import Arrow4Icon from "../../../public/arrow5.svg";
 import SearchIcon from "public/search.svg";
+import OrdersIcon from "public/orders.svg";
+import MessagesIcon from "public/messages.svg";
+import UserIcon from "public/user.svg";
 
 export default function Home()
 {
@@ -14,17 +17,17 @@ export default function Home()
   return (
       <>
         <View className="flex flex-col items-center box-border w-full h-full px-6 pb-24" style={{backgroundColor: "#F8F8F8"}}>
-          <View className="flex items-center w-full my-2">
-            <View className="mr-3 font-semibold" style={{color: "#4572FB"}}>
+          <View className="flex w-full my-2">
+            <View className="flex items-center mr-3 font-semibold" style={{color: "#4572FB"}}>
               广州
-              <Image className="h-1/5" mode="heightFix"  src={Arrow3Icon} />
+              <Image className="h-1/6 ml-0.5" mode="heightFix"  src={Arrow3Icon} />
             </View>
-            <View className="flex flex-1 px-4 py-3 rounded-3xl" style={{color: "#CCCCCC", backgroundColor: "#EEEEF0"}}>
+            <View className="flex items-center flex-1 px-4 py-2 rounded-3xl text-lg" style={{color: "#CCCCCC", backgroundColor: "#EEEEF0"}}>
+              <Image className="h-4/5 mr-0.5" mode="heightFix"  src={SearchIcon} />
               单号/中介/订单信息搜索
-              <Image className="h-2/3" mode="heightFix"  src={SearchIcon} />
             </View>
           </View>
-          <View className="flex items-center justify-between w-full px-8 py-4 my-1.5 rounded-lg" style={{backgroundColor: "#4572FB"}}>
+          <View className="flex items-center justify-between w-full px-8 py-4 my-1.5 rounded-xl" style={{backgroundColor: "#4572FB"}}>
             <View className="text-white font-semibold px-2">地点  </View>
             <Image className="h-1/4" mode="heightFix"  src={Arrow4Icon} />
             <View className="text-white font-semibold px-2">薪酬  </View>
@@ -85,10 +88,31 @@ export default function Home()
               </View>
             </View>
           </View>
-        </View>
-        <View className="fixed bottom-0 w-full h-24 flex justify-between bg-white px-11 pt-4 pb-8">
           <Button className="flex items-center justify-center mx-2 shadow-sm" onClick={() => navigate('/login')}>登录</Button>
           <Button className="flex items-center justify-center mx-2 shadow-sm" onClick={() => navigate('/create-order')}>新建订单</Button>
+        </View>
+        <View className="flex flex-col fixed bottom-0 w-full">
+          <View className="flex items-center">
+            <
+          </View>
+          <View className="flex justify-between bg-white px-11 pt-4 pb-8">
+            <View className="flex flex-col items-center">
+              <Image className="w-5/6" mode="widthFix" src={OrdersIcon}></Image>
+              <View className="mt-2 text-lg font-semibold" style={{color: "#4572FB"}}>课源</View>
+            </View>
+            <View className="flex flex-col items-center">
+              <Image className="w-5/6" mode="widthFix" src={StarIcon}></Image>
+              <View className="mt-2 text-lg font-semibold" style={{color: "#99A1B6"}}>管理</View>
+            </View>
+            <View className="flex flex-col items-center">
+              <Image className="w-5/6" mode="widthFix" src={MessagesIcon}></Image>
+              <View className="mt-2 text-lg font-semibold" style={{color: "#99A1B6"}}>消息</View>
+            </View>
+            <View className="flex flex-col items-center">
+              <Image className="w-5/6" mode="widthFix" src={UserIcon}></Image>
+              <View className="mt-2 text-lg font-semibold" style={{color: "#99A1B6"}}>我的</View>
+            </View>
+          </View>
         </View>
       </>
     )
