@@ -2,7 +2,7 @@ import {View, Text, Textarea} from '@tarojs/components'
 import {Cascader, Field} from '@antmjs/vantui'
 import react from 'react'
 import DataCell from "@/pages/order/data-cell";
-import ArrowIcon from '../../../public/arrow.png'
+import ArrowIcon from '../../../public/arrow3.png'
 import LocationIcon from '../../../public/location.png'
 import './create-order.scss'
 
