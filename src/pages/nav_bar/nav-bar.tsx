@@ -1,6 +1,6 @@
 import Taro from "@tarojs/taro";
 import {Image, View} from "@tarojs/components";
-import Logo from "public/logo.png";
+import Logo from "public/logo.svg";
 import {useEffect, useRef, useState} from "react";
 import { useAtom } from 'jotai'
 import store from "@/store/store";

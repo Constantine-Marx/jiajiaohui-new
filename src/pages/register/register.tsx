@@ -1,6 +1,6 @@
 import {Image, View} from "@tarojs/components";
 import {useNavigate} from "react-router-dom";
-import Logo from "../../../public/logo.png";
+import Logo from "../../../public/logo.svg";
 
 export default function Register()
 {

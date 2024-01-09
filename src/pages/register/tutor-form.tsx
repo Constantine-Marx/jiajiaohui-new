@@ -1,5 +1,5 @@
 import {Button, Image, View} from "@tarojs/components";
-import ArrowIcon from '../../../public/arrow.png'
+import ArrowIcon from '../../../public/arrow3.png'
 import {useNavigate} from "react-router-dom";
 import {useState} from "react";
 
