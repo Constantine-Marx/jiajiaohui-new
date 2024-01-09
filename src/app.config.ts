@@ -9,21 +9,4 @@ export default defineAppConfig({
     navigationBarTextStyle: 'black'
   },
   lazyCodeLoading: "requiredComponents"
-  // subpackages: [
-  //   {
-  //     root: "pages/order",
-  //     pages: [
-  //       "create-order",
-  //       "data-cell"
-  //     ]
-  //   },
-  //   {
-  //     root: "pages/register",
-  //     pages: [
-  //       "register",
-  //       "agent-form",
-  //       "tutor-form"
-  //     ]
-  //   }
-  // ]
 })
