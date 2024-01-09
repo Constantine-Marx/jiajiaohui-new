@@ -1,10 +1,21 @@
 import {Button, Image, View} from "@tarojs/components";
 import ArrowIcon from '../../../public/arrow.png'
 import {useNavigate} from "react-router-dom";
+import {useState} from "react";
 
 export default function TutorForm()
 {
   const navigate = useNavigate();
+  const [gender, setGender] = useState('');
+  const [job, setJob] = useState('');
+
+  const handleGenderSelect = (selectedGender) => {
+    setGender(selectedGender);
+  };
+
+  const handleJobSelect = (selectedJob) => {
+    setJob(selectedJob);
+  };
 
   return (
     <View className="flex flex-col h-full w-full" style={{backgroundColor: "#F8F8F8"}}>
@@ -14,13 +25,45 @@ export default function TutorForm()
         <View className="flex flex-col bg-white rounded-lg px-4 py-4 mt-3">
           <View className="flex items-center justify-between py-2">
             <View className="mr-16">性别</View>
-            <View className="flex h-8 items-center justify-center rounded" style={{width: "180rpx", backgroundColor: "#EEEEF0"}}>男</View>
-            <View className="flex h-8 items-center justify-center rounded" style={{width: "180rpx", backgroundColor: "#EEEEF0"}}>女</View>
+            <View
+              className={`flex h-8 items-center justify-center rounded ${
+                gender === 'male' ? 'bg-blue-500' : ''
+              }`}
+              style={{ width: '180rpx', backgroundColor: gender === 'male' ? '#4572FB' : '#EEEEF0' }}
+              onClick={() => handleGenderSelect('male')}
+            >
+              男
+            </View>
+            <View
+              className={`flex h-8 items-center justify-center rounded ${
+                gender === 'female' ? 'bg-blue-500' : ''
+              }`}
+              style={{ width: '180rpx', backgroundColor: gender === 'female' ? '#4572FB' : '#EEEEF0' }}
+              onClick={() => handleGenderSelect('female')}
+            >
+              女
+            </View>
           </View>
           <View className="flex items-center justify-between py-2">
             <View className="mr-16">职业</View>
-            <View className="flex h-8 items-center justify-center rounded" style={{width: "180rpx", backgroundColor: "#EEEEF0"}}>兼职老师</View>
-            <View className="flex h-8 items-center justify-center rounded" style={{width: "180rpx", backgroundColor: "#EEEEF0"}}>全职老师</View>
+            <View
+              className={`flex h-8 items-center justify-center rounded ${
+                job === 'partTime' ? 'bg-blue-500' : ''
+              }`}
+              style={{ width: '180rpx', backgroundColor: job === 'partTime' ? '#4572FB' : '#EEEEF0' }}
+              onClick={() => handleJobSelect('partTime')}
+            >
+              兼职老师
+            </View>
+            <View
+              className={`flex h-8 items-center justify-center rounded ${
+                job === 'fullTime' ? 'bg-blue-500' : ''
+              }`}
+              style={{ width: '180rpx', backgroundColor: job === 'fullTime' ? '#4572FB' : '#EEEEF0' }}
+              onClick={() => handleJobSelect('fullTime')}
+            >
+              全职老师
+            </View>
           </View>
           <View className="flex items-center py-2">
             <View className="flex-1">教学意向</View>
