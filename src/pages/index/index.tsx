@@ -5,13 +5,13 @@ import {View} from "@tarojs/components";
 import NavBar from "@/pages/nav_bar/nav-bar";
 import CreateOrder from "@/pages/order/create-order";
 import {useAtom} from "jotai/index";
-import store from "@/store/store";
+import {NavBarOffsetHeightAtom} from "@/store/store";
 import Register from "@/pages/register/register";
 import TutorForm from "@/pages/register/tutor-form";
 import AgentForm from "@/pages/register/agent-form";
 
 export default function Index(){
-  const [nav_bar_offset_height, _] = useAtom(store.NavBarOffsetHeightAtom);
+  const [nav_bar_offset_height, _] = useAtom(NavBarOffsetHeightAtom);
   return (
       <View className="flex flex-col">
         <NavBar />
