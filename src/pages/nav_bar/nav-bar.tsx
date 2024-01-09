@@ -3,13 +3,13 @@ import {Image, View} from "@tarojs/components";
 import Logo from "public/logo.svg";
 import {useEffect, useRef, useState} from "react";
 import { useAtom } from 'jotai'
-import store from "@/store/store";
+import {NavBarOffsetHeightAtom} from "@/store/store";
 import {TaroElement} from "@tarojs/runtime";
 
 export default function NavBar()
 {
   let container = useRef(null);
-  const [_, setNavBarOffsetHeight] = useAtom(store.NavBarOffsetHeightAtom);
+  const [_, setNavBarOffsetHeight] = useAtom(NavBarOffsetHeightAtom);
   const [nav_bar_height, setNavBarHeight ] = useState(0);
   const menu_button = Taro.getMenuButtonBoundingClientRect();
   Taro.getSystemInfo()
@@ -25,9 +25,6 @@ export default function NavBar()
       setNavBarOffsetHeight(parseInt(taro_element.style._value.height!));
     }
   });
-
-  // const location = useLocation();
-  // const isRegisterPage = location.pathname.includes("register");
 
   return (
       <View className="fixed flex items-end px-6 py-2 w-full bg-white z-10" style={{ height: nav_bar_height}} ref={container}>

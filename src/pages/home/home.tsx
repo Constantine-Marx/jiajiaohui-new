@@ -1,14 +1,16 @@
-import {Button, Image, View} from "@tarojs/components";
+import {Image, View} from "@tarojs/components";
 import {useNavigate} from "react-router-dom";
 import LocationIcon from "public/location.svg";
 import StarIcon from "public/star.svg";
 import Arrow1Icon from "public/arrow1.svg";
-import Arrow3Icon from "../../../public/arrow4.svg";
-import Arrow4Icon from "../../../public/arrow5.svg";
+import Arrow2Icon from "public/arrow2.svg";
+import Arrow4Icon from "public/arrow4.svg";
+import Arrow5Icon from "public/arrow5.svg";
 import SearchIcon from "public/search.svg";
 import OrdersIcon from "public/orders.svg";
 import MessagesIcon from "public/messages.svg";
 import UserIcon from "public/user.svg";
+import SpeakerIcon from "public/speaker.svg";
 
 export default function Home()
 {
@@ -20,7 +22,7 @@ export default function Home()
           <View className="flex w-full my-2">
             <View className="flex items-center mr-3 font-semibold" style={{color: "#4572FB"}}>
               广州
-              <Image className="h-1/6 ml-0.5" mode="heightFix"  src={Arrow3Icon} />
+              <Image className="h-1/6 ml-0.5" mode="heightFix"  src={Arrow4Icon} />
             </View>
             <View className="flex items-center flex-1 px-4 py-2 rounded-3xl text-lg" style={{color: "#CCCCCC", backgroundColor: "#EEEEF0"}}>
               <Image className="h-4/5 mr-0.5" mode="heightFix"  src={SearchIcon} />
@@ -29,13 +31,13 @@ export default function Home()
           </View>
           <View className="flex items-center justify-between w-full px-8 py-4 my-1.5 rounded-xl" style={{backgroundColor: "#4572FB"}}>
             <View className="text-white font-semibold px-2">地点  </View>
-            <Image className="h-1/4" mode="heightFix"  src={Arrow4Icon} />
+            <Image className="h-1/4" mode="heightFix"  src={Arrow5Icon} />
             <View className="text-white font-semibold px-2">薪酬  </View>
-            <Image className="h-1/4" mode="heightFix"  src={Arrow4Icon} />
+            <Image className="h-1/4" mode="heightFix"  src={Arrow5Icon} />
             <View className="text-white font-semibold px-2">年段  </View>
-            <Image className="h-1/4" mode="heightFix"  src={Arrow4Icon} />
+            <Image className="h-1/4" mode="heightFix"  src={Arrow5Icon} />
             <View className="text-white font-semibold px-2">学科  </View>
-            <Image className="h-1/4" mode="heightFix"  src={Arrow4Icon} />
+            <Image className="h-1/4" mode="heightFix"  src={Arrow5Icon} />
           </View>
           <View className="flex flex-col box-border w-full h-1/3 px-4 pb-4 my-1.5 bg-white rounded-lg shadow-sm">
             <View className="flex">
@@ -88,12 +90,12 @@ export default function Home()
               </View>
             </View>
           </View>
-          <Button className="flex items-center justify-center mx-2 shadow-sm" onClick={() => navigate('/login')}>登录</Button>
-          <Button className="flex items-center justify-center mx-2 shadow-sm" onClick={() => navigate('/create-order')}>新建订单</Button>
         </View>
         <View className="flex flex-col fixed bottom-0 w-full">
-          <View className="flex items-center">
-            <
+          <View className="flex items-center px-5 py-3 h-11" style={{backgroundColor: "#4572FB"}} onClick={() => navigate('/login')}>
+            <Image className="h-3/4" mode="heightFix" src={SpeakerIcon} />
+            <View className="flex-1 ml-1.5 text-white">老师/中介快速登录，获取完整服务</View>
+            <Image className="h-2/3" mode="heightFix" src={Arrow2Icon} />
           </View>
           <View className="flex justify-between bg-white px-11 pt-4 pb-8">
             <View className="flex flex-col items-center">
