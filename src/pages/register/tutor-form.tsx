@@ -1,5 +1,5 @@
 import {Button, Image, View} from "@tarojs/components";
-import ArrowIcon from '../../../public/arrow3.png'
+import ArrowIcon from 'public/arrow3.png'
 import {useNavigate} from "react-router-dom";
 import {useState} from "react";
 
@@ -26,18 +26,14 @@ export default function TutorForm()
           <View className="flex items-center justify-between py-2">
             <View className="mr-16">性别</View>
             <View
-              className={`flex h-8 items-center justify-center rounded ${
-                gender === 'male' ? 'bg-blue-500' : ''
-              }`}
+              className="flex h-8 items-center justify-center rounded"
               style={{ width: '180rpx', backgroundColor: gender === 'male' ? '#4572FB' : '#EEEEF0' }}
               onClick={() => handleGenderSelect('male')}
             >
               男
             </View>
             <View
-              className={`flex h-8 items-center justify-center rounded ${
-                gender === 'female' ? 'bg-blue-500' : ''
-              }`}
+              className="flex h-8 items-center justify-center rounded"
               style={{ width: '180rpx', backgroundColor: gender === 'female' ? '#4572FB' : '#EEEEF0' }}
               onClick={() => handleGenderSelect('female')}
             >
@@ -47,18 +43,14 @@ export default function TutorForm()
           <View className="flex items-center justify-between py-2">
             <View className="mr-16">职业</View>
             <View
-              className={`flex h-8 items-center justify-center rounded ${
-                job === 'partTime' ? 'bg-blue-500' : ''
-              }`}
+              className="flex h-8 items-center justify-center rounded"
               style={{ width: '180rpx', backgroundColor: job === 'partTime' ? '#4572FB' : '#EEEEF0' }}
               onClick={() => handleJobSelect('partTime')}
             >
               兼职老师
             </View>
             <View
-              className={`flex h-8 items-center justify-center rounded ${
-                job === 'fullTime' ? 'bg-blue-500' : ''
-              }`}
+              className="flex h-8 items-center justify-center rounded"
               style={{ width: '180rpx', backgroundColor: job === 'fullTime' ? '#4572FB' : '#EEEEF0' }}
               onClick={() => handleJobSelect('fullTime')}
             >

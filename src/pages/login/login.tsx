@@ -2,7 +2,6 @@ import AnonIcon from "public/anon.png";
 import Logo from "public/logo.svg"
 import {View, Button, Image} from "@tarojs/components";
 import {useNavigate} from "react-router-dom";
-import "./login.scss";
 
 export default function Login()
 {
@@ -23,6 +22,7 @@ export default function Login()
         <View className="font-medium" style="color: #535D6D">老师/中介快速登录，获取完整服务</View>
       </View>
       <Button className="mt-14 w-full h-12 border-0 rounded text-white text-lg flex items-center justify-center"
+        style={{backgroundColor: "#4572FB"}}
         id="bt" onClick={() => navigate('/register')}
       >快速登录/注册</Button>
     </View>

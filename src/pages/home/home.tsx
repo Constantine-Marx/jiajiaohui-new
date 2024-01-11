@@ -14,7 +14,7 @@ import SpeakerIcon from "public/speaker.svg";
 
 export default function Home()
 {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
       <>

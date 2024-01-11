@@ -27,11 +27,11 @@ export default function NavBar()
   });
 
   return (
-      <View className="fixed flex items-end px-6 py-2 w-full bg-white z-10" style={{ height: nav_bar_height}} ref={container}>
-        <View className="flex items-center">
-          <Image className="w-6 h-6" src={Logo} />
-          <View className="text-xl font-semibold pl-1">佳教汇</View>
-        </View>
+    <View className="fixed flex items-end w-full bg-white z-10" style={{padding: `${nav_bar_height * 0.1}px ${nav_bar_height * 0.25}px`, height: nav_bar_height}} ref={container}>
+      <View className="flex items-center">
+        <Image className="" style={{height: nav_bar_height * 0.32}} mode="heightFix" src={Logo} />
+        <View className="font-semibold pl-1" style={{fontSize: nav_bar_height * 0.28}}>佳教汇</View>
       </View>
+    </View>
   )
 }
