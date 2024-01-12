@@ -1,11 +1,11 @@
-import {Image, Input, View} from "@tarojs/components";
-import {ReactNode} from "react";
+import {Image, Input, View} from '@tarojs/components';
+import {ReactNode} from 'react';
 import ArrowIcon from 'public/arrow3.png'
 import LocationIcon from 'public/location.png'
 import './data-cell.scss';
 
 interface InputProps {
-  onClick?: (...params: any) => any
+  onClick?: (...params: unknown[]) => unknown
   label: string;
   placeholder: string;
   required?: boolean;
@@ -39,11 +39,11 @@ export default function DataCell(
 
   return (
     <View onClick={onClick} className="my-2 flex items-center pb-2 border-b border-gray-300">
-          <View className="text-red-300 w-2">{required ? "*" : ""}</View>
-          <View className="font-bold ">{label}</View>
-          {isAddonAnImage && <View className="flex-1 text-zinc-500 ml-4">{placeholder}</View>}
-          {!isAddonAnImage && <Input className="flex-1 ml-4" placeholder="0"></Input>}
-          {content}
+      <View className="text-red-300 w-2">{required ? '*' : ''}</View>
+      <View className="font-bold ">{label}</View>
+      {isAddonAnImage && <View className="flex-1 text-zinc-500 ml-4">{placeholder}</View>}
+      {!isAddonAnImage && <Input className="flex-1 ml-4" placeholder="0"></Input>}
+      {content}
     </View>
   )
 }
