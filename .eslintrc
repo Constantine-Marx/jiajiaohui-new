@@ -32,7 +32,11 @@
       },
       {
         "selector": "function",
-        "modifiers": ["exported"],
+        "format": ["camelCase"]
+      },
+      {
+        "selector": "variable",
+        "types": ["function"],
         "format": ["camelCase"]
       }
     ],
