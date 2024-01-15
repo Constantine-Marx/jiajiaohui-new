@@ -8,8 +8,8 @@ export default function Login()
   const navigate = useNavigate();
 
   return (
-    <View className="flex flex-col items-center box-border h-full w-full px-4 py-8">
-      <View className="flex items-center w-full mb-14">
+    <View className="flex flex-col items-center gap-14 box-border h-full w-full px-4 py-8">
+      <View className="flex items-center w-full">
         <Image className="w-24 h-24" src={AnonIcon}/>
         <View className="flex flex-col flex-1">
           <View className="text-lg font-semibold mb-1">未登录/注册</View>
@@ -22,7 +22,7 @@ export default function Login()
         <View className="font-medium" style="color: #535D6D">老师/中介快速登录，获取完整服务</View>
       </View>
       <Button
-        className="mt-14 w-full h-12 border-0 rounded text-white text-lg flex items-center justify-center"
+        className="w-full h-12 border-0 rounded text-white text-lg flex items-center justify-center"
         style={{backgroundColor: '#4572FB'}}
         id="bt"
         onClick={() => navigate('/register')}
