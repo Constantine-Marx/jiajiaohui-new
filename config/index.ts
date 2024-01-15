@@ -4,7 +4,7 @@ import devConfig from './dev'
 import prodConfig from './prod'
 
 // eslint-disable-next-line import/no-commonjs
-const { UnifiedWebpackPluginV5 } = require('weapp-tailwindcss/webpack')
+import {UnifiedWebpackPluginV5} from 'weapp-tailwindcss/webpack'
 
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
 export default defineConfig(async (merge, {}) => {
@@ -86,7 +86,7 @@ export default defineConfig(async (merge, {}) => {
         chunkFilename: 'css/[name].[chunkhash].css'
       },
       // @ts-ignore
-      esnextModules: [/@antmjs[\/]vantui/],
+      esnextModules: [/@antmjs\/vantui/],
       postcss: {
         autoprefixer: {
           enable: true,

@@ -1,26 +1,48 @@
 {
   "root": true,
-  "extends": ["taro/react", "plugin:@typescript-eslint/recommended-type-checked"],
+  "extends": ["eslint:recommended", "taro/react", "plugin:@typescript-eslint/recommended-type-checked"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": true
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "@stylistic/eslint-plugin"],
   "rules": {
-    "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off",
     "jsx-quotes": [
       2,
       "prefer-double"
     ],
-    "@typescript-eslint/no-unsafe-assignment": "off",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-tag-spacing": [
+      1,
+      {
+        "closingSlash": "never",
+        "beforeSelfClosing": "never",
+        "afterOpening": "never",
+        "beforeClosing": "never"
+      }
+    ],
+    "@typescript-eslint/no-unsafe-assignment": 1,
     "@typescript-eslint/naming-convention": [
-      "warn",
+      1,
       {
         "selector": "function",
         "modifiers": ["exported"],
         "format": ["PascalCase"]
+      },
+      {
+        "selector": "function",
+        "format": ["camelCase"]
+      },
+      {
+        "selector": "variable",
+        "types": ["function"],
+        "format": ["camelCase"]
       }
+    ],
+    "@stylistic/quotes": [
+      1,
+      "single"
     ]
   }
 }
