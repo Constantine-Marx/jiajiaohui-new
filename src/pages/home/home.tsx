@@ -21,6 +21,19 @@ export default function Home()
 
   const [is_cascader_visible, setIsCascaderVisible] = useState(false);
 
+  const child =  <View className="flex-col w-full bg-white">
+    <View className="flex items-center gap-2 px-3.5 py-2.5">
+      <Image className="w-4" mode="widthFix" src={Selector1Icon}/>
+      <View className="flex-1">一年级</View>
+      <View style={{color: '#858A99'}}>78</View>
+    </View>
+    <View className="flex items-center gap-2 px-3.5 py-2.5">
+      <Image className="w-4" mode="widthFix" src={Selector2Icon}/>
+      <View className="flex-1">二年级</View>
+      <View style={{color: '#858A99'}}>57</View>
+    </View>
+  </View>
+
   return (
     <View className="flex flex-col gap-2 w-full h-full" style={{backgroundColor: '#F8F8F8'}}>
       <View className="flex flex-1 flex-col items-center box-border w-full px-6 pt-3" style={{backgroundColor: '#F8F8F8'}}>
@@ -37,24 +50,20 @@ export default function Home()
         <View className="flex items-center justify-between gap-3 z-40 w-full px-5 py-2.5 mt-2 rounded-xl"
               style={{backgroundColor: '#4572FB'}} onClick={() => setIsCascaderVisible(true)}
         >
-          <View className="flex items-center justify-center h-fit">
-            <View className="text-white font-medium">地点  </View>
-            <View className="min-w-3.5">2</View>
+          <View className="flex items-center justify-center gap-2 h-fit">
+            <View className="text-white font-medium">地点</View>
             <Image className="w-2" mode="widthFix"  src={Arrow5Icon}/>
           </View>
-          <View className="flex items-center justify-center h-fit">
-            <View className="text-white font-medium">地点  </View>
-            <View className="min-w-3.5">23</View>
+          <View className="flex items-center justify-center gap-2 h-fit">
+            <View className="text-white font-medium">薪酬</View>
             <Image className="w-2" mode="widthFix"  src={Arrow5Icon}/>
           </View>
-          <View className="flex items-center justify-center h-fit">
-            <View className="text-white font-medium">地点  </View>
-            <View className="min-w-3.5">456</View>
+          <View className="flex items-center justify-center gap-2 h-fit">
+            <View className="text-white font-medium">年段</View>
             <Image className="w-2" mode="widthFix"  src={Arrow5Icon}/>
           </View>
-          <View className="flex items-center justify-center h-fit">
-            <View className="text-white font-medium">地点  </View>
-            <View className="min-w-3.5">   </View>
+          <View className="flex items-center justify-center gap-2 h-fit">
+            <View className="text-white font-medium">学科</View>
             <Image className="w-2" mode="widthFix"  src={Arrow5Icon}/>
           </View>
         </View>
@@ -65,18 +74,7 @@ export default function Home()
                   backgroundColor: '#EEEEF0'
                 }}
           >
-            <View className="flex-col w-full bg-white">
-              <View className="flex items-center gap-2 px-3.5 py-2.5">
-                <Image className="w-4" mode="widthFix" src={Selector1Icon}/>
-                <View className="flex-1">一年级</View>
-                <View style={{color: '#858A99'}}>78</View>
-              </View>
-              <View className="flex items-center gap-2 px-3.5 py-2.5">
-                <Image className="w-4" mode="widthFix" src={Selector2Icon}/>
-                <View className="flex-1">二年级</View>
-                <View style={{color: '#858A99'}}>57</View>
-              </View>
-            </View>
+            {child}
           </View>
           <View className={`fixed top-0 left-0 z-30 w-full ${is_cascader_visible ? 'h-full' : 'h-0' } bg-black transition-opacity duration-200`} style={{opacity: is_cascader_visible ? 0.7 : 0}} onClick={() => setIsCascaderVisible(false)}></View>
         </View>
