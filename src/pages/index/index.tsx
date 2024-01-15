@@ -14,7 +14,7 @@ export default function Index(){
       <View id="nav-bar" className="sticky top-0 z-50">
         <NavBar/>
       </View>
-      <View id="content" className="flex-1 box-border w-full">
+      <View id="content" className="flex-1">
         <Routes>
           <Route path="/*" element={<Home/>}/>
           <Route path="/login" element={<Login/>}/>
