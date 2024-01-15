@@ -23,7 +23,8 @@
     ],
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "skipLibCheck": true
   },
   "include": ["./src", "./types", "./config"],
   "compileOnSave": false

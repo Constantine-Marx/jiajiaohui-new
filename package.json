@@ -92,5 +92,8 @@
     "typescript": "^5.1.0",
     "weapp-tailwindcss": "^3.0.3",
     "webpack": "5.78.0"
+  },
+  "resolutions": {
+    "@types/sass": "1.43.1"
   }
 }
