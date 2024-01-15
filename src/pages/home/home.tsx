@@ -35,8 +35,8 @@ export default function Home()
   </View>
 
   return (
-    <View className="flex flex-col gap-2 w-full h-full" style={{backgroundColor: '#F8F8F8'}}>
-      <View className="flex flex-1 flex-col items-center box-border w-full px-6 pt-3" style={{backgroundColor: '#F8F8F8'}}>
+    <View className="flex flex-col h-full" style={{backgroundColor: '#F8F8F8'}}>
+      <View className="flex flex-1 flex-col items-center box-border w-full px-6 py-3" style={{backgroundColor: '#F8F8F8'}}>
         <View id="search-bar" className="flex gap-3 w-full">
           <View className="flex items-center font-semibold" style={{color: '#4572FB'}}>
             广州
