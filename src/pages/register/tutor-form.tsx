@@ -1,5 +1,5 @@
 import {Button, Image, View} from '@tarojs/components';
-import ArrowIcon from 'public/arrow3.png'
+import ArrowIcon from 'public/arrow3.svg'
 import {useNavigate} from 'react-router-dom';
 import {useState} from 'react';
 
@@ -10,7 +10,7 @@ export default function TutorForm()
   const [job, setJob] = useState('');
 
   return (
-    <View className="flex flex-col h-full w-full" style={{backgroundColor: '#F8F8F8'}}>
+    <View className="flex flex-col w-full h-full" style={{backgroundColor: '#F8F8F8'}}>
       <View className="flex flex-1 flex-col w-full px-6 py-10" style={{backgroundColor: '#F8F8F8'}}>
         <View className="font-semibold text-xl">填写基础信息，匹配合适课源</View>
         <View className="mt-2 mb-3" style={{color: '#858A99'}}>完成信息填写，系统精准推送合适课源</View>
