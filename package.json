@@ -91,9 +91,7 @@
     "tsconfig-paths-webpack-plugin": "^4.0.1",
     "typescript": "^5.1.0",
     "weapp-tailwindcss": "^3.0.3",
-    "webpack": "5.78.0"
-  },
-  "resolutions": {
+    "webpack": "5.78.0",
     "@types/sass": "1.43.1"
   }
 }

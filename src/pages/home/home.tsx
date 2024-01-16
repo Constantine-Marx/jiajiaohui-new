@@ -6,27 +6,18 @@ import OrdersIcon from 'public/orders.svg';
 import MessagesIcon from 'public/messages.svg';
 import UserIcon from 'public/user.svg';
 import SpeakerIcon from 'public/speaker.svg';
-import {Suspense} from 'react';
 import Orders from '@/pages/home/orders';
 import User from '@/pages/home/user';
 
 export default function Home() {
   const navigate = useNavigate();
-  // const AsyncOrders = lazy(() => import('@/pages/home/orders'))
-  // const AsyncUser = lazy(() => import('@/pages/home/user'))
-
-  function useAsyncComponent(element)
-  {
-    return <Suspense>{element}</Suspense>;
-  }
-
 
   return (
     <View className="flex flex-col h-full">
       <View className="flex-1 w-full">
         <Routes>
-          <Route path="/*" element={useAsyncComponent(<Orders/>)}/>
-          <Route path="/user" element={useAsyncComponent(<User/>)}/>
+          <Route path="/*" element={<Orders/>}/>
+          <Route path="/user" element={<User/>}/>
         </Routes>
       </View>
       <View className="sticky bottom-0 flex flex-col w-full">
